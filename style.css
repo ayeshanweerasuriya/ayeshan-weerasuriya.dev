@@ -121,6 +121,11 @@ input:checked + label {
   text-decoration: none;
 }
 
+.phone-number {
+  text-decoration: none;
+  color: rgb(59, 59, 59);
+}
+
 .icon-container {
   margin-top: 10px;
   display: flex;
