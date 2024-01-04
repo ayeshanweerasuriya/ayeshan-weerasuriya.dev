@@ -121,7 +121,7 @@ input:checked + label {
   text-decoration: none;
 }
 
-.phone-number {
+.phone-number a {
   text-decoration: none;
   color: rgb(59, 59, 59);
 }
