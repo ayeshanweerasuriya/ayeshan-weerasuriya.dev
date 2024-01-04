@@ -1,3 +1,9 @@
+:root {
+  --primary: #000000;
+  --seconday: #3b3b3b;
+  --tertiary: #9a9a9a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -75,22 +81,52 @@ input:checked + label {
 .circle {
   width: 50px;
   height: 50px;
-  background-color: #000000;
+  background-color: var(--primary);
   border-radius: 50%;
   display: flex; /* Add display:flex for vertical alignment */
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
 }
 
-/* PROFILE PAGE */
+/* COMMON */
 
-.profile-page-container {
+.page-container {
   margin: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 645px;
 }
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.icons {
+  margin-right: 5px;
+}
+
+.second-title {
+  margin: 0;
+  font-size: 15px;
+  min-width: 600px;
+  color: var(--seconday);
+}
+
+.third-title {
+  font-size: 10px;
+  color: var(--seconday);
+}
+
+.skills {
+  margin-top: 10px;
+  color: var(--tertiary);
+  font-size: 10px;
+}
+
+/* PROFILE PAGE */
 
 .profile-page-top {
   display: flex;
@@ -107,14 +143,8 @@ input:checked + label {
   margin: 0;
   display: flex;
   flex-direction: column;
-  color: rgb(59, 59, 59);
+  color: var(--seconday);
   font-size: 10px;
-}
-
-.name {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: black;
 }
 
 .email {
@@ -123,7 +153,7 @@ input:checked + label {
 
 .phone-number a {
   text-decoration: none;
-  color: rgb(59, 59, 59);
+  color: var(--seconday);
 }
 
 .icon-container {
@@ -132,13 +162,9 @@ input:checked + label {
   flex-direction: row;
 }
 
-.icons {
-  margin-right: 5px;
-}
-
 .highlight {
   margin-top: 30px;
-  color: rgb(59, 59, 59);
+  color: var(--seconday);
   text-align: justify;
   font-size: 13px;
 }
@@ -151,24 +177,8 @@ input:checked + label {
   box-sizing: border-box;
 }
 
-.institute-name {
-  font-size: 15px;
-  min-width: 600px;
-}
-
-.duration {
-  color: rgb(59, 59, 59);
-  font-size: 10px;
-}
-
-.skills {
-  margin-top: 10px;
-  color: rgba(59, 59, 59, 0.527);
-  font-size: 10px;
-}
-
 hr {
-  border: 1px solid #000000; /* Set the color and style of the line */
+  border: 1px solid var(--primary); /* Set the color and style of the line */
   margin: 20px 0px; /* Adjust the margin as needed */
 }
 
@@ -182,18 +192,16 @@ hr {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.role-place {
-  color: rgb(59, 59, 59);
+/* .role-place {
   margin-top: 15px;
-  font-size: 15px;
-}
+} */
 
-.experience {
+/* .experience {
   margin-top: 8px;
   margin-bottom: 20px;
   font-size: 10px;
-  color: rgba(59, 59, 59, 0.527);
-}
+  color: var(--seconday);
+} */
 
 .proficiencies {
   display: flex;
@@ -204,7 +212,7 @@ ul {
   font-size: 10px;
   list-style-type: none;
   padding: 0;
-  color: rgb(59, 59, 59);
+  color: var(--seconday);
   margin-top: 15px;
 }
 
@@ -214,29 +222,20 @@ li {
 
 /* PROJECTS */
 
-.project-heading {
+/* .project-heading {
   margin-bottom: 15px;
-}
+} */
 
-.project-title {
+/* .title {
   font-size: 15px;
-  color: rgb(59, 59, 59);
-}
-
-.technology {
-  font-size: 10px;
-}
+  color: var(--seconday);
+} */
 
 .projects {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .github-projects {
   margin-left: auto; /* Push the GitHub icon to the right */
-}
-
-.project-icons {
-  width: 20px;
-  height: 20px;
 }
