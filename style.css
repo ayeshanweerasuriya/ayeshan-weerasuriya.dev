@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -7,10 +6,6 @@
 
 body {
   background-color: #282828;
-}
-
-.wrapper {
-  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -30,35 +25,86 @@ body {
   cursor: pointer;
   overflow: hidden;
   border-radius: 2rem;
-  margin: 0 10px;
+  margin: 0px 10px;
   background-color: #f1f1f1;
   transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
 
-.content-box {
-  display: flex;
-  margin: 50px 100px;
-  min-width: 500px;
+input {
+  display: none;
 }
 
-.user-content {
+input:checked + label {
+  min-width: 800px;
+}
+
+.card-content {
   display: flex;
-  flex-direction: row;
+  margin: 15px;
+  min-width: 700px;
+}
+
+.card-main-header {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.card-name-container {
+  width: 50px;
+  height: 305px;
+  background-color: #006eb7;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  writing-mode: vertical-rl; /* vertical writing mode */
+  text-orientation: upright; /* ensures text is upright */
+  display: flex; /* Add display:flex for vertical alignment */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.card-title {
+  color: #f1f1f1;
+  font-size: medium;
+  margin: 0; /* remove default margin for h2 */
+  text-align: center; /* Center horizontally */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: flex; /* Add display:flex for vertical alignment */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+/* PROFILE PAGE */
+
+.profile-page-container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  min-width: 645px;
 }
 
-/* Profile Page */
+.profile-page-top {
+  display: flex;
+}
 
 .pro-pic {
   width: auto;
   height: 100px;
   border-radius: 50px;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .user-details {
+  margin: 0;
   display: flex;
   flex-direction: column;
   color: rgb(59, 59, 59);
@@ -71,68 +117,28 @@ body {
   color: black;
 }
 
-.address {
-  font-size: 10px;
-  margin-bottom: 5px;
-}
-
 .email {
-  margin-bottom: 5px;
   text-decoration: none;
 }
 
 .icon-container {
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
 }
 
 .icons {
   margin-right: 5px;
-  height: 20px;
 }
 
 .highlight {
-  margin-left: 100px;
-  margin-right: 80px;
+  margin-top: 30px;
   color: rgb(59, 59, 59);
   text-align: justify;
   font-size: 13px;
-  min-width: 640px; /* Adjust shrink */
 }
 
-.circle-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.circle {
-  margin: 15px;
-  margin-top: 35px;
-  height: 50px;
-  width: 50px;
-  min-width: 50px;
-  background-color: black;
-  color: aliceblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-}
-
-.page-title {
-  margin-top: 15px;
-  color: black;
-  min-width: 100px;
-}
-
-/* Education */
-
-.university-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between columns as needed */
-}
+/* EDUCATION */
 
 .university {
   width: 48%; /* Adjust the width of each university */
@@ -161,11 +167,14 @@ hr {
   margin: 20px 0px; /* Adjust the margin as needed */
 }
 
-/* Experience and Skills */
+/* EXPERIENCE AND SKILLS */
 
-.skills-container {
-  margin: 50px 100px;
-  min-width: 600px;
+.card-title-e {
+  color: #f1f1f1;
+  font-size: small;
+  margin: 0; /* remove default margin for h2 */
+  text-align: center; /* Center horizontally */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .role-place {
@@ -176,7 +185,7 @@ hr {
 
 .experience {
   margin-top: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 10px;
   color: rgba(59, 59, 59, 0.527);
 }
@@ -190,35 +199,15 @@ ul {
   font-size: 10px;
   list-style-type: none;
   padding: 0;
-  /* margin-left: 50px; */
   color: rgb(59, 59, 59);
   margin-top: 15px;
-  /* flex-basis: 100%; Adjust as needed for the desired spacing */
 }
 
 li {
   margin-bottom: 5px;
 }
 
-/* Optional: Add additional styling as needed */
-.proficiencies {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Optional: Style for better readability on smaller screens */
-@media (max-width: 600px) {
-  .proficiencies {
-    flex-direction: column;
-  }
-}
-
-/* Projects */
-
-.projects-container {
-  margin: 50px 100px;
-  min-width: 500px;
-}
+/* PROJECTS */
 
 .project-heading {
   margin-bottom: 15px;
@@ -238,10 +227,6 @@ li {
   align-items: center;
 }
 
-.project-title {
-  margin: 0; /* Remove default margin for the h4 element */
-}
-
 .github-projects {
   margin-left: auto; /* Push the GitHub icon to the right */
 }
@@ -249,26 +234,4 @@ li {
 .project-icons {
   width: 20px; /* Adjust the size as needed */
   height: 20px;
-}
-
-input {
-  display: none;
-}
-
-input:checked + label {
-  min-width: 800px;
-}
-
-.card[for="c1"] {
-  background-image: url("./assets/profile-page.png");
-  /* background-color: #f1f1f1; */
-}
-.card[for="c2"] {
-  background-image: url("./assets/education.png");
-}
-.card[for="c3"] {
-  background-image: url("./assets/ex-&-skills.png");
-}
-.card[for="c4"] {
-  background-image: url("./assets/projects.png");
 }
