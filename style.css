@@ -192,17 +192,6 @@ hr {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* .role-place {
-  margin-top: 15px;
-} */
-
-/* .experience {
-  margin-top: 8px;
-  margin-bottom: 20px;
-  font-size: 10px;
-  color: var(--seconday);
-} */
-
 .proficiencies {
   display: flex;
   justify-content: space-between;
@@ -222,18 +211,8 @@ li {
 
 /* PROJECTS */
 
-/* .project-heading {
-  margin-bottom: 15px;
-} */
-
-/* .title {
-  font-size: 15px;
-  color: var(--seconday);
-} */
-
 .projects {
   display: flex;
-  /* align-items: center; */
 }
 
 .github-projects {
