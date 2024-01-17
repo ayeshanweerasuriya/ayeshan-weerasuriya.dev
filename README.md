@@ -4,7 +4,7 @@ Welcome to the repository of my personal portfolio website.
 
 ## Live Website
 
-Visit my portfolio at [https://ayeshan-weerasuriya.pages.dev/](https://ayeshan-weerasuriya.pages.dev/)
+<p>Visit my portfolio at <a href="https://ayeshan-weerasuriya.pages.dev/" target="_blank">https://ayeshan-weerasuriya.pages.dev</a>.</p>
 
 ## About
 
