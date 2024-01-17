@@ -17,7 +17,7 @@ This repository contains the code for my personal portfolio website. Feel free t
 
 ## Contact
 
-If you have any questions or would like to get in touch, you can reach out to me at [ayeshanweerasuriya@gmail.com](ayeshanweerasuriya@gmail.com).
+<p>If you have any questions or would like to get in touch, you can reach out to me at <a href="mailto:ayeshanweerasuriya@gmail.com">ayeshanweerasuriya@gmail.com</a>.</p>
 
 ---
 
