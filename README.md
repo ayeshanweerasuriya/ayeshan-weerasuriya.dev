@@ -14,6 +14,7 @@ This repository contains the code for my personal portfolio website. Feel free t
 
 - HTML
 - CSS
+- Javascript
 
 ## Contact
 
