@@ -42,8 +42,8 @@ cards.forEach((card) => {
     card.scrollTop = 0;
 
     // Show the overflow of the clicked card after a delay
-    setTimeout(() => {
-      card.style.overflowY = "auto";
-    }, 500);
+    // setTimeout(() => {
+    //   card.style.overflowY = "auto";
+    // }, 500);
   });
 });
