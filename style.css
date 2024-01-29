@@ -7,100 +7,86 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
 }
 
 body {
   background-color: #282828;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
-.container {
-  height: 400px;
+.card-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 20px;
 }
 
 .card {
-  width: 80px;
-  min-width: 80px;
-  border-radius: 0.75rem;
-  background-size: cover;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin: 0px 10px;
+  width: 100%;
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
   background-color: #f1f1f1;
-  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  border-radius: 20px;
+  transition: height 0.4s ease;
+  overflow: hidden;
+  overflow-y: hidden;
+  cursor: pointer;
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
 
-input {
-  display: none;
+.card.expanded {
+  height: 400px;
 }
 
-input:checked + label {
-  min-width: 800px;
-}
-
-.card-content {
-  display: flex;
-  margin: 15px;
-  min-width: 700px;
-}
-
-.card-main-header {
-  display: flex;
-  flex-direction: column;
-  margin-right: 15px;
-}
+/* CARD TOP HEADER CONTAINER CONTENT */
 
 .card-name-container {
-  width: 50px;
-  height: 305px;
-  background-color: #006eb7;
-  border-radius: 25px;
-  margin-bottom: 15px;
-  writing-mode: vertical-rl; /* vertical writing mode */
-  text-orientation: upright; /* ensures text is upright */
-  display: flex; /* Add display:flex for vertical alignment */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  display: flex;
 }
 
-.card-title {
+.card-name-title {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #006eb7;
+  border-radius: 20px;
+}
+
+.card-name-title h3 {
   color: #f1f1f1;
   font-size: medium;
-  margin: 0; /* remove default margin for h2 */
-  text-align: center; /* Center horizontally */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.circle {
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary);
+.card-name-number h3 {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
   border-radius: 50%;
-  display: flex; /* Add display:flex for vertical alignment */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  margin-left: 5px;
+  color: #f1f1f1;
 }
 
-/* COMMON */
+/* COMMON ATTRIBUTES */
 
 .page-container {
-  margin: 30px;
+  margin: 20px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 645px;
 }
 
-h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
+.third-header {
+  font-size: 10px;
+  margin-bottom: 10px;
   color: var(--primary);
 }
 
@@ -111,7 +97,6 @@ h3 {
 .second-title {
   margin: 0;
   font-size: 15px;
-  min-width: 600px;
   color: var(--seconday);
 }
 
@@ -129,7 +114,9 @@ h3 {
 /* PROFILE PAGE */
 
 .profile-page-top {
+  margin-top: 10px;
   display: flex;
+  align-items: center;
 }
 
 .pro-pic {
@@ -163,7 +150,7 @@ h3 {
 }
 
 .highlight {
-  margin-top: 30px;
+  margin-top: 20px;
   color: var(--seconday);
   text-align: justify;
   font-size: 13px;
@@ -172,7 +159,7 @@ h3 {
 /* EDUCATION */
 
 .university {
-  width: 48%; /* Adjust the width of each university */
+  width: 100%; /* Adjust the width of each university */
   margin-bottom: 20px; /* Adjust the margin between rows */
   box-sizing: border-box;
 }
@@ -184,21 +171,17 @@ hr {
 
 /* EXPERIENCE AND SKILLS */
 
-.card-title-e {
-  color: #f1f1f1;
-  font-size: small;
-  margin: 0; /* remove default margin for h2 */
-  text-align: center; /* Center horizontally */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .proficiencies {
   display: flex;
   justify-content: space-between;
 }
 
+.s-p-heading {
+  margin-bottom: 10px;
+}
+
 ul {
-  font-size: 10px;
+  font-size: 8px;
   list-style-type: none;
   padding: 0;
   color: var(--seconday);
@@ -217,4 +200,76 @@ li {
 
 .github-projects {
   margin-left: auto; /* Push the GitHub icon to the right */
+}
+
+@media only screen and (min-width: 500px) {
+  .page-container {
+    margin: 30px;
+  }
+}
+
+/* @media only screen and (min-width: 800px) {
+} */
+
+@media only screen and (min-width: 800px) {
+  .page-container {
+    width: 100%;
+    margin: 30px;
+  }
+
+  .card-name-container {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .card-name-title {
+    text-align: center;
+    width: 50px;
+    height: 315px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+  }
+
+  .card-name-title h3 {
+    writing-mode: vertical-rl; /* vertical writing mode */
+    text-orientation: upright; /* ensures text is upright */
+  }
+
+  .card-name-number h3 {
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 70px;
+    border-radius: 2rem;
+    height: 400px;
+    margin: 0px 10px;
+    overflow-y: hidden;
+    transition: width 0.4s ease;
+  }
+
+  .card.expanded-w {
+    width: 800px;
+  }
+
+  .third-header {
+    font-size: 20px;
+  }
+
+  .highlight {
+    margin-top: 30px;
+  }
+
+  ul {
+    font-size: 10px;
+  }
 }
