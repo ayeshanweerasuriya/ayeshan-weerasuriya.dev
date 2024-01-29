@@ -1,46 +1,49 @@
-const cards = document.querySelectorAll(".card");
-
-const handleCardClick = (card) => {
-  // Remove the "expanded" class from all cards
-  cards.forEach((c) => {
-    c.classList.remove("expanded-w");
-    c.classList.remove("expanded");
-    c.style.overflowY = "hidden";
-    c.scrollTop = 0;
-  });
-
-  // Add the "expanded" class to the clicked card
-  card.classList.add(mediaQuery.matches ? "expanded-w" : "expanded");
-};
-
 const mediaQuery = window.matchMedia("(min-width: 800px)");
 
-const attachListeners = () => {
-  cards.forEach((card) => {
-    card.addEventListener("click", () => handleCardClick(card));
+function handleMediaQueryChange(event) {
+  // Remove the "expanded" class from all cards
+  document.querySelectorAll(".card").forEach((card) => {
+    card.classList.remove("expanded-w");
+    card.classList.remove("expanded");
+    card.style.overflowY = "hidden";
+    card.scrollTop = 0;
   });
-};
-
-const removeListeners = () => {
-  cards.forEach((card) => {
-    card.removeEventListener("click", () => handleCardClick(card));
-  });
-};
-
-// Initial setup
-if (mediaQuery.matches) {
-  attachListeners();
-} else {
-  removeListeners();
 }
 
-// Listen for changes in media query
-mediaQuery.addListener((event) => {
-  if (event.matches) {
-    // Screen size is now larger than 800px
-    attachListeners();
-  } else {
-    // Screen size is now smaller than 800px
-    removeListeners();
-  }
+// Call the handleMediaQueryChange function initially to set up the event listeners based on the current window width
+handleMediaQueryChange(mediaQuery);
+
+// Add a listener for the media query change event
+mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+// Add event listeners for the "click" event on the cards
+const cards = document.querySelectorAll(".card");
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    // Remove the "expanded" class from all cards
+    document.querySelectorAll(".card").forEach((c) => {
+      c.classList.remove("expanded-w");
+      c.classList.remove("expanded");
+      c.style.overflowY = "hidden";
+      c.scrollTop = 0;
+    });
+
+    // Check the media query condition
+    if (mediaQuery.matches) {
+      // If the media query condition is met, add the "expanded-w" class to the clicked card
+      card.classList.add("expanded-w");
+    } else {
+      // If the media query condition is not met, add the "expanded" class to the clicked card
+      card.classList.add("expanded");
+    }
+
+    // Hide the overflow of the clicked card
+    card.style.overflowY = "hidden";
+    card.scrollTop = 0;
+
+    // Show the overflow of the clicked card after a delay
+    setTimeout(() => {
+      card.style.overflowY = "auto";
+    }, 500);
+  });
 });
