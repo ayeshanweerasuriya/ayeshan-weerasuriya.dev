@@ -13,6 +13,10 @@ body {
   background-color: #282828;
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
 .card-container {
