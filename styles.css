@@ -88,20 +88,13 @@ body {
   justify-content: center;
 }
 
-.third-header {
-  font-size: 10px;
-  margin-bottom: 10px;
+.name {
   color: var(--primary);
+  padding-bottom: 10px;
 }
 
 .icons {
   margin-right: 5px;
-}
-
-.second-title {
-  margin: 0;
-  font-size: 15px;
-  color: var(--seconday);
 }
 
 .third-title {
@@ -115,6 +108,9 @@ body {
   font-size: 10px;
 }
 
+h4 {
+  color: var(--seconday);
+}
 /* PROFILE PAGE */
 
 .profile-page-top {
@@ -212,10 +208,7 @@ li {
   }
 }
 
-/* @media only screen and (min-width: 800px) {
-} */
-
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1100px) {
   .page-container {
     width: 100%;
     margin: 30px;
@@ -263,10 +256,6 @@ li {
 
   .card.expanded-w {
     width: 800px;
-  }
-
-  .third-header {
-    font-size: 20px;
   }
 
   .highlight {
