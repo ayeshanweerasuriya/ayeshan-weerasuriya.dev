@@ -154,6 +154,7 @@ h4 {
   color: var(--seconday);
   text-align: justify;
   font-size: 13px;
+  word-spacing: 3px;
 }
 
 /* EDUCATION */
