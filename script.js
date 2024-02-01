@@ -1,4 +1,4 @@
-const mediaQuery = window.matchMedia("(min-width: 1100px)");
+const mediaQuery = window.matchMedia("(min-width: 1000px)");
 
 function handleMediaQueryChange(event) {
   // Remove the "expanded" class from all cards
