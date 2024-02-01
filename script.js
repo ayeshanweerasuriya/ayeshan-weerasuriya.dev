@@ -1,4 +1,4 @@
-const mediaQuery = window.matchMedia("(min-width: 1000px)");
+const mediaQuery = window.matchMedia("(min-width: 1100px)");
 const cards = document.querySelectorAll(".card");
 
 function handleMediaQueryChange() {
