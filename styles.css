@@ -80,7 +80,7 @@ body {
 /* COMMON ATTRIBUTES */
 
 .page-container {
-  margin: 20px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
