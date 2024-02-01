@@ -5,7 +5,6 @@ function handleMediaQueryChange(event) {
   document.querySelectorAll(".card").forEach((card) => {
     card.classList.remove("expanded-w");
     card.classList.remove("expanded");
-    card.style.overflowY = "hidden";
     card.scrollTop = 0;
   });
 }
@@ -24,7 +23,6 @@ cards.forEach((card) => {
     document.querySelectorAll(".card").forEach((c) => {
       c.classList.remove("expanded-w");
       c.classList.remove("expanded");
-      c.style.overflowY = "hidden";
       c.scrollTop = 0;
     });
 
@@ -37,13 +35,6 @@ cards.forEach((card) => {
       card.classList.add("expanded");
     }
 
-    // Hide the overflow of the clicked card
-    card.style.overflowY = "hidden";
     card.scrollTop = 0;
-
-    // Show the overflow of the clicked card after a delay
-    // setTimeout(() => {
-    //   card.style.overflowY = "auto";
-    // }, 500);
   });
 });
