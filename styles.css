@@ -285,16 +285,18 @@ li {
 
 /* Implement dark mode */
 
-body.dark .card {
-  background-color: #252525;
-}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #f2f2f2;
+    --seconday: #d3d3d3;
+    --tertiary: #9a9a9a;
+  }
 
-body.dark :root {
-  --primary: #f2f2f2;
-  --seconday: #d3d3d3;
-  --tertiary: #9a9a9a;
-}
+  .card {
+    background-color: #252525;
+  }
 
-body.dark h3 {
-  color: var(--primary);
+  h3 {
+    color: var(--primary);
+  }
 }
