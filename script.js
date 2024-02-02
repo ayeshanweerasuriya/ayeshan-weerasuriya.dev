@@ -29,11 +29,3 @@ mediaQuery.addEventListener("change", handleMediaQueryChange);
 cards.forEach((card) => {
   card.addEventListener("click", () => handleCardClick(card));
 });
-
-// Detect if the user prefers a dark color scheme
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-// If the user prefers a dark color scheme, add the 'dark' class to the body
-if (prefersDark) {
-  document.body.classList.add("dark");
-}
