@@ -109,7 +109,12 @@ body {
 }
 
 .icons {
-  margin-right: 5px;
+  margin-right: 8px;
+  transition: transform 0.3s ease-in;
+}
+
+.icons:hover {
+  transform: scale(1.5);
 }
 
 .third-title {
