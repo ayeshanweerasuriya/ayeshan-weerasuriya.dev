@@ -4,11 +4,18 @@ Welcome to the repository of my personal portfolio website.
 
 ## Live Website
 
-<p>Visit my portfolio at <a href="https://ayeshan-weerasuriya.pages.dev/" target="_blank">https://ayeshan-weerasuriya.pages.dev</a>.</p>
+Visit my portfolio at [https://ayeshan-weerasuriya.pages.dev/](https://ayeshan-weerasuriya.pages.dev).
 
 ## About
 
-This repository contains the code for my personal portfolio website. Feel free to explore the code.
+This repository contains the code for my personal portfolio website. It is designed to be responsive for all screen sizes and features a card-like UI separated into four parts:
+
+1. Profile Page
+2. Education
+3. Skills and Experience
+4. Projects
+
+Feel free to explore the code.
 
 ## Technologies Used
 
@@ -18,7 +25,7 @@ This repository contains the code for my personal portfolio website. Feel free t
 
 ## Contact
 
-<p>If you have any questions or would like to get in touch, you can reach out to me at <a href="mailto:ayeshanweerasuriya@gmail.com">ayeshanweerasuriya@gmail.com</a>.</p>
+If you have any questions or would like to get in touch, you can reach out to me at [ayeshanweerasuriya@gmail.com](mailto:ayeshanweerasuriya@gmail.com).
 
 ---
 
