@@ -15,6 +15,8 @@ This repository contains the code for my personal portfolio website. It is desig
 3. Skills and Experience
 4. Projects
 
+In the future, I plan to convert this website into a React application.
+
 Feel free to explore the code.
 
 ## Technologies Used
