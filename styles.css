@@ -221,6 +221,26 @@ li {
   margin-left: auto; /* Push the GitHub icon to the right */
 }
 
+/* if project list get longer */
+
+/* .projects {
+  margin-right: 20px;
+}
+
+.scroller {
+  overflow: auto;
+}
+
+.project-top-space {
+  margin-top: 200px;
+}
+
+.scroll-gap {
+  margin-right: 15px;
+} */
+
+/*  */
+
 @media only screen and (min-width: 500px) {
   .page-container {
     margin: 30px;
